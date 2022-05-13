@@ -1,0 +1,17 @@
+CREATE TABLE products(
+    id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(64) NOT NULL,
+    description VARCHAR (128) NULL,
+    stock INT DEFAULT 0,
+    price INT DEFAULT 0,
+    id_category INT,
+    photo VARCHAR(128),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP,
+    PRIMARY KEY(id)
+)
+
+CREATE TABLE category(
+    id INT PRIMARY KEY NOT NULL GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(64) NOT NULL
+)
